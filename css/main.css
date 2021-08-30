@@ -1,0 +1,162 @@
+/* Start Main */
+
+@font-face {
+    font-family: cario;
+    src: url(../fonts/Cairo.ttf);
+}
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    font-family: ubuntu, arial;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+/* End Main */
+
+
+/* Start Top */
+
+section {
+    width: 95%;
+    margin: auto;
+}
+
+section .top {
+    overflow: hidden;
+    padding: 20px 0;
+    font-size: 17px;
+}
+
+.top > div {
+    width: calc(100% / 3);
+    font-weight: bold;
+    float: right;
+}
+.top .lang {
+    text-align: right;
+}
+.top .lang a {
+    text-decoration: none;
+    color: #5dc002;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    transition: all .3s;
+}
+.top .lang a:hover {
+    border-bottom: 4px solid #5dc002;
+}
+.top .name {
+    text-align: center;
+}
+
+/* End Top */
+
+/* Start Take Action */
+
+.take-action {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+.signup {
+    top: 25%;
+}
+
+.take-action .head {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    line-height: 1.7;
+}
+
+.take-action .head span {
+    color: #5dc002;
+}
+
+.take-action .box .green-btn {
+    display: block;
+    border: 1px solid #5dc002;
+    padding: 20px 0px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: #5dc002;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    transition: all .3s;
+}
+.take-action .box .green-btn:hover {
+    background-color: transparent;
+    color: #5dc002;
+}
+/* End Take Action */
+
+/* Start Form */
+form {
+    margin-top: -20px;
+}
+
+form .input-field label {
+    display: block;
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #5dc002;
+}
+
+form .input-field input {
+    height: 40px;
+    width: 95%;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form .input-field input::placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+form .input-field input:focus::placeholder {
+    opacity: 0;
+}
+
+
+form .input-field input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: ubuntu;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #5dc002;
+    border: 1px solid #5dc002;
+    cursor: pointer;
+    transition: all .3s;
+    height: 40px;
+}
+
+form .input-field input[type="submit"]:hover {
+    background-color: transparent;
+    color: #5dc002;
+}
+
+/* End Form */
