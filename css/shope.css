@@ -1,0 +1,262 @@
+/* Strat Main Options */
+
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ubuntu, arial;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* End Main Options */
+
+/* Start Top */
+
+section {
+    width: 95%;
+    margin: auto;
+}
+
+section .top {
+    overflow: hidden;
+    padding: 20px 0;
+    font-size: 17px;
+}
+
+.top > div {
+    width: calc(100% / 3);
+    font-weight: bold;
+    float: right;
+}
+.top .lang {
+    text-align: right;
+}
+.top .lang a {
+    text-decoration: none;
+    color: #5dc002;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    transition: all .3s;
+}
+.top .lang a:hover {
+    border-bottom: 4px solid #5dc002;
+}
+.top .name {
+    text-align: center;
+}
+.top .box i {
+    padding: 5px;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.top .box i:hover {
+    background-color: #5dc002;
+    color: #fff;
+}
+
+/* End Top */
+
+/* Start Filter */
+
+.filter {
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.filter div:first-of-type {
+    width: 91%;
+    float: left;
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 10px;
+}
+
+.filter div:first-of-type input {
+    width: 92%;
+    height: 40px;
+    float: left;
+    border: none;
+    outline: none;
+    background-color: #f9f9f9;
+    padding-left: 5px;
+}
+
+.filter div:first-of-type input::placeholder {
+    font-weight: bold;
+    font-family: ubuntu, arial;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.filter div:first-of-type input:focus::placeholder {
+    opacity: 0;
+}
+
+.filter div:first-of-type i {
+    font-size: 20px;
+    border: 1px solid #5dc002;
+    display: block;
+    float: right;
+    height: 40px;
+    width: 6.5%;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #5dc002;
+    transition: all .4s;
+}
+
+.filter div:first-of-type i:hover {
+    background-color: #f9f9f9;
+    color: #5dc002;
+}
+
+.filter div:last-of-type {
+    border: 1px solid #5dc002;
+    width: 6.5%;
+    float: right;
+    line-height: 45px;
+    font-size: 20px;
+    display: block;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #5dc002;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-left: 1%;
+    color: #fff;
+    transition: all .4s;
+}
+
+.filter div:last-of-type:hover {
+    background-color: #f9f9f9;
+    color: #5dc002;
+}
+
+/* End Filter */
+
+/* Start Categories */
+
+.categories {
+    width: 72%;
+    margin: auto;
+    display: none;
+}
+
+.categories ul {
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+.categories ul li {
+    display: inline-block;
+    margin: 5px;
+    width: 48%;
+    float: left;
+}
+
+.categories ul li a {
+    border: 1px solid #5dc002;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5dc002;
+    font-weight: bold;
+    transition: all .4s;
+}
+.categories ul li a:hover {
+    background-color: #fff;
+    color: #5dc002;
+}
+/* End Categories */
+
+/* Start Items Container */
+
+.item-container {
+    overflow: hidden;
+    padding: 20px 0;
+}
+.item-container .item-box {
+    width: calc((100% / 3) - 30px);
+    float: left;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    text-align: center;
+    user-select: none;
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.item-container .item-box img {
+    width: 80%;
+    height: 210px;
+    margin-bottom: 20px;
+}
+
+.item-container .item-box .name {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.item-container .item-box .unit {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.item-container .item-box .item-action {
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+}
+.item-container .item-box .item-action > p {
+    float: left;
+} 
+.item-container .item-box .item-action p.price {
+    font-weight: bold;
+    line-height: 1.4;
+    width: calc(100% - 80px);
+}
+.item-container .item-box .item-action p.love {
+    text-align: left;
+    width: 40px;
+    height: 40px;
+}
+.item-container .item-box .item-action p.love i {
+    color: #f00;
+    cursor: pointer;
+    font-size: 20px;
+}
+.item-container .item-box .item-action p.addToCart {
+    text-align: right;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.item-container .item-box .item-action p.addToCart i {
+    cursor: pointer;
+}
+/* End Items Container */

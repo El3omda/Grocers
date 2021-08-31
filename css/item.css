@@ -1,0 +1,285 @@
+/* Start Main */
+
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ubuntu, arial;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+section {
+    width: 92%;
+    margin: auto;
+}
+
+/* End Main */
+
+/* Start Floating Top Icon */
+
+.abs-top {
+    position: absolute;
+    line-height: 35px;
+    background-color: #fff;
+    color: #5dc002;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.abs-top:hover {
+    color: #fff;
+    background-color: #5dc002;
+}
+.abs-top0 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+}
+.abs-top0 i {
+    margin-left: -2px;
+}
+.abs-top1 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+}
+
+/* End Floating Top Icon */
+
+/* Start Item Image */
+
+.item-image {
+    width: 90%;
+    height: 350px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.item-image img {
+    width: 50%;
+    height: 350px;
+}
+/* End Item Image */
+
+/* Start Name And Quantity */
+
+.name-quantity {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.name-quantity .name {
+    font-weight: bold;
+    font-size: 50px;
+    width: 50%;
+    text-align: left;
+    float: left;
+    position: relative;
+}
+
+.name-quantity .name:after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 150px;
+    background-color: #DF2E2E;
+    bottom: -10px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.name-quantity .quantity {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.name-quantity .quantity ul {
+    list-style: none;
+    user-select: none;
+}
+.name-quantity .quantity ul li {
+    display: inline-block;
+    margin-left: 20px;
+    border: 1px solid #5dc002;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #5dc002;
+    color: #fff;
+}
+.name-quantity .quantity ul li:first-of-type {
+    cursor: pointer;
+    background-color: #DF2E2E;
+    border: 1px solid #DF2E2E;
+    transition: all .3s;
+}
+.name-quantity .quantity ul li:first-of-type:hover {
+    color: #DF2E2E;
+    background-color: #fff;
+}
+.name-quantity .quantity ul li:nth-of-type(2) {
+    border: 1px solid #5dc002;
+    background-color: #fff;
+    color: #DF2E2E;
+}
+
+.name-quantity .quantity ul li:nth-of-type(2) span {
+    color: #5dc002;
+}
+
+.name-quantity .quantity ul li:last-of-type {
+    cursor: pointer;
+    background-color: #5dc002;
+    border: 1px solid #5dc002;
+    transition: all .3s;
+}
+.name-quantity .quantity ul li:last-of-type:hover {
+    color: #5dc002;
+    background-color: #fff;
+}
+/* End Name And Quantity */
+
+/* Start Item Info */
+
+.item-info {
+    padding: 20px 0;
+    min-height: 120px;
+}
+
+.item-info p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.item-info ul {
+    list-style: none;
+    overflow: hidden;
+    margin-top: 30px;
+    text-align: center;
+}
+.item-info ul li {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+.item-info ul li:first-of-type i {
+    color: rgb(255, 145, 0);
+}
+.item-info ul li:last-of-type i {
+    color: #DF2E2E;
+}
+/* End Item Info */
+
+/* Start Related Items */
+
+.related {
+    min-height: 120px;
+}
+.related ul {
+    list-style: none;
+    overflow: hidden;
+}
+.related ul li {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    padding: 8px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 90px;
+    transition: all .3s;
+}
+.related ul li:hover {
+    background-color: #fff;
+}
+.related ul li a img {
+    width: 90%;
+    height: 90%;
+}
+
+/* End Related Items */
+
+/* Start Price And Add To Cart */
+
+.price-add {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.price-add ul {
+    list-style: none;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+.price-add ul li {
+    display: inline-block;
+    width: 45%;
+    float: left;
+}
+.price-add ul li:first-of-type {
+    height: 69px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.price-add ul li:last-of-type {
+    padding: 5px 0;
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: #5dc002;
+    margin-left: 4%;
+    border: 1px solid #5dc002;
+    transition: all .3s;
+}
+.price-add ul li:last-of-type a {
+    text-decoration: none;
+    color: #fff;
+}
+.price-add ul li:last-of-type i {
+    margin-right: 20px;
+    border: 1px solid #5dc002;
+    color: #333;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.price-add ul li:last-of-type:hover {
+    background-color: #fff;
+}
+.price-add ul li:last-of-type:hover a {
+    color: #5dc002;
+}
+.price-add ul li:last-of-type:hover i {
+    color: #fff;
+    background-color: #5dc002;
+}
+.tprice {
+    color: #5dc002;
+}
+.cur {
+    color: #DF2E2E;
+}
+/* End Price And Add To Cart */
