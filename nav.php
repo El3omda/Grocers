@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <nav>
     <ul>
-        <li><a href="#"><i class="fa fa-home"></i></a></li>
-        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+        <li><a href="shop.php"><i class="fa fa-home"></i></a></li>
+        <li><a href="#"><i class="fa fa-bell-o"></i><span>1</span></a></li>
         <li>
-                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                <a href="cart.php"><i class="fa fa-shopping-basket"></i><span>1</span></a>
         </li>
-        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-        <li><a href="#"><i class="fa fa-user"></i></a></li>
+        <li><a href="favorites.php"><i class="fa fa-heart"></i></a></li>
+        <li><a href="user.php"><i class="fa fa-user"></i></a></li>
     </ul>
 </nav>
 <style>
@@ -16,7 +16,7 @@
         margin: 0;
     }
     nav {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 0;
         left: 0;
@@ -59,5 +59,25 @@
     }
     nav ul li:nth-of-type(3) a:hover {
         background-color: #fff;
+    }
+    nav ul li:nth-of-type(4) a:hover i {
+        color: #DF2E2E;
+    }
+    nav ul li:nth-of-type(3) a span,nav ul li:nth-of-type(2) a span {
+        position: absolute;
+        bottom: 0;
+        color: #DF2E2E;
+        font-size: 17px;
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
+        line-height: 21px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #DF2E2E;
+    }
+    
+    nav ul li:nth-of-type(3) a span,nav ul li:nth-of-type(2) a span {
+        bottom: 5px;
     }
 </style>

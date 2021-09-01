@@ -1,0 +1,197 @@
+/* Start Main */
+
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ubuntu, arial;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+section {
+    width: 92%;
+    margin: auto;
+}
+
+/* End Main */
+
+/* Start Floating Top Icon */
+
+.abs-top {
+    position: absolute;
+    line-height: 35px;
+    background-color: #fff;
+    color: #5dc002;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.abs-top:hover {
+    color: #fff;
+    background-color: #5dc002;
+}
+.abs-top0 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+}
+.abs-top0 i {
+    margin-left: -2px;
+}
+.abs-top1 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+}
+
+p.head {
+    text-align: center;
+    font-weight: bold;
+    margin: 30px 0;
+    font-size: 24px;
+    position: relative;
+}
+
+p.head:after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5dc002;
+}
+
+/* End Floating Top Icon */
+
+/* Start Item You Selected */
+
+.item-u-selected {
+    min-height: calc(100vh - 120px);
+    height: calc(100vh - 120px);
+}
+
+.item-u-selected table {
+    width: 100%;
+}
+.item-u-selected table th,.item-u-selected table td {
+    border: 1px solid #5dc002;
+}
+.item-u-selected table th {
+    background-color: #5dc002;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+}
+.item-u-selected table th:first-of-type {
+    border-top-left-radius: 10px;
+}
+.item-u-selected table th:last-of-type {
+    border-top-right-radius: 10px;
+}
+.item-u-selected table td {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.item-u-selected table td:last-of-type a {
+    font-size: 25px;
+    background-color: #DF2E2E;
+    padding: 5px 8px;
+    border: 1px solid #DF2E2E;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.item-u-selected table td:last-of-type a:hover {
+    color: #DF2E2E;
+    background-color: #fff;
+}
+
+.item-u-selected table td img {
+    width: 80px;
+    height: 80px;
+}
+/* End Item You Selected */
+
+/* Start Confirm Order */
+
+.confirm {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+}
+.confirm ul {
+    overflow: hidden;
+    list-style: none;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+}
+.confirm ul li {
+    display: inline-block;
+    width: 40%;
+    float: left;
+}
+.confirm ul li:first-of-type {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.confirm ul li:last-of-type {
+    padding: 2px 0;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #5dc002;
+    margin-left: 4%;
+    border: 1px solid #5dc002;
+    float: right;
+    transition: all .3s;
+}
+.confirm ul li:last-of-type a {
+    text-decoration: none;
+    color: #fff;
+}
+.confirm ul li:last-of-type i {
+    margin-right: 20px;
+    border: 1px solid #5dc002;
+    color: #333;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.confirm ul li:last-of-type:hover {
+    background-color: #fff;
+}
+.confirm ul li:last-of-type:hover a {
+    color: #5dc002;
+}
+.confirm ul li:last-of-type:hover i {
+    color: #fff;
+    background-color: #5dc002;
+}
+.ftprice {
+    color: #5dc002;
+}
+.cur {
+    color: #DF2E2E;
+}
+/* End Confirm Order */

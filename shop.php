@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,88 +9,113 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/shope.css">
 </head>
+
 <body>
     <section>
-    <div class="top">
-        <div class="lang">
-            <a href="#">Arabic</a>
+        <div class="top">
+            <div class="lang">
+                <a href="#">Arabic</a>
+            </div>
+            <div class="name">Our Shop</div>
+            <div class="box">
+            </div>
         </div>
-        <div class="name">Our Shop</div>
-        <div class="box">
-            <i class="fa fa-bars"></i>
+        <div class="filter">
+            <div class="search">
+                <input type="text" name="ItemName" placeholder="Search Your Item . . .">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="btn-sh-filter">
+                <i class="fa fa-cogs"></i>
+            </div>
         </div>
-    </div>
-    <div class="filter">
-        <div class="search">
-            <input type="text" name="ItemName" placeholder="Search Your Item . . .">
-            <i class="fa fa-search"></i>
+        <div class="categories">
+            <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Vegetable</a></li>
+                <li><a href="#">Fish</a></li>
+                <li><a href="#">Meat</a></li>
+                <li><a href="#">Baker</a></li>
+                <li><a href="#">Drinks</a></li>
+                <li><a href="#">Chips</a></li>
+            </ul>
         </div>
-        <div>
-            <i class="fa fa-cogs"></i>
+        <div class="item-container">
+            <a href="#" class="item-box">
+                <img src="imgs/items/tomato.png" alt="">
+                <div class="item-info">
+                    <p class="name">Tomato</p>
+                    <p class="unit">1KG Price</p>
+                </div>
+                <div class="item-action">
+                    <p class="love">
+                        <i class="fa fa-heart-o"></i>
+                    </p>
+                    <p class="price">10 EGP</p>
+                    <p class="addToCart">
+                        <i class="fa fa-shopping-basket"></i>
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="item-box">
+                <img src="imgs/items/chili.png" alt="">
+                <div class="item-info">
+                    <p class="name">Chili</p>
+                    <p class="unit">1KG Price</p>
+                </div>
+                <div class="item-action">
+                    <p class="love">
+                        <i class="fa fa-heart-o"></i>
+                    </p>
+                    <p class="price">15 EGP</p>
+                    <p class="addToCart">
+                        <i class="fa fa-shopping-basket"></i>
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="item-box">
+                <img src="imgs/items/carrots.png" alt="">
+                <div class="item-info">
+                    <p class="name">Carrot</p>
+                    <p class="unit">1KG Price</p>
+                </div>
+                <div class="item-action">
+                    <p class="love">
+                        <i class="fa fa-heart-o"></i>
+                    </p>
+                    <p class="price">25 EGP</p>
+                    <p class="addToCart">
+                        <i class="fa fa-shopping-basket"></i>
+                    </p>
+                </div>
+            </a>
         </div>
-    </div>
-    <div class="categories">
-        <ul>
-            <li><a href="#">All</a></li>
-            <li><a href="#">Vegetable</a></li>
-            <li><a href="#">Fish</a></li>
-            <li><a href="#">Meat</a></li>
-            <li><a href="#">Baker</a></li>
-            <li><a href="#">Drinks</a></li>
-            <li><a href="#">Chips</a></li>
-        </ul>
-    </div>
-    <div class="item-container">
-        <a href="#" class="item-box">
-            <img src="imgs/items/tomato.png" alt="">
-            <div class="item-info">
-                <p class="name">Tomato</p>
-                <p class="unit">1KG Price</p>
-            </div>
-            <div class="item-action">
-                <p class="love">
-                    <i class="fa fa-heart-o"></i>
-                </p>
-                <p class="price">10 EGP</p>
-                <p class="addToCart">
-                    <i class="fa fa-shopping-basket"></i>
-                </p>
-            </div>
-        </a>
-        <a href="#" class="item-box">
-            <img src="imgs/items/chili.png" alt="">
-            <div class="item-info">
-                <p class="name">Chili</p>
-                <p class="unit">1KG Price</p>
-            </div>
-            <div class="item-action">
-                <p class="love">
-                    <i class="fa fa-heart-o"></i>
-                </p>
-                <p class="price">15 EGP</p>
-                <p class="addToCart">
-                    <i class="fa fa-shopping-basket"></i>
-                </p>
-            </div>
-        </a>
-        <a href="#" class="item-box">
-            <img src="imgs/items/carrots.png" alt="">
-            <div class="item-info">
-                <p class="name">Carrot</p>
-                <p class="unit">1KG Price</p>
-            </div>
-            <div class="item-action">
-                <p class="love">
-                    <i class="fa fa-heart-o"></i>
-                </p>
-                <p class="price">25 EGP</p>
-                <p class="addToCart">
-                    <i class="fa fa-shopping-basket"></i>
-                </p>
-            </div>
-        </a>
-    </div>
     </section>
+    <div class="notifications">
+        <div class="content">
+            <i class="fa fa-times"></i>
+            <div class="noti">
+                <form action="" method="POST">
+                    <textarea name="NotiText" readonly>Please Compelete Your Account Informations</textarea>
+                    <div class="action-btn">
+                        <input type="submit" name="delete" value="Delete">
+                    </div>
+                </form>
+            </div>
+            <div class="noti">
+                <form action="" method="POST">
+                    <textarea name="NotiText" readonly>Please Compelete Your Account Informations</textarea>
+                    <div class="action-btn">
+                        <input type="submit" name="delete" value="Delete">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <?php include 'nav.php';?>
+
+    <script src="js/jquery.main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
