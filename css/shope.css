@@ -169,7 +169,7 @@ section .top {
 .categories ul li {
     display: inline-block;
     margin: 5px;
-    width: 48%;
+    width: 47%;
     float: left;
 }
 
@@ -316,7 +316,6 @@ section .top {
     font-size: 18px;
     overflow: hidden;
     color: #fff;
-    height: 20px;
 }
 
 .notifications .noti .action-btn {
@@ -325,7 +324,6 @@ section .top {
     overflow: hidden;
 }
 .notifications .noti .action-btn > input {
-    width: 90%;
     float: right;
     color: #fff;
     font-weight: bold;
@@ -341,3 +339,151 @@ section .top {
     background-color: #fff;
 }
 /* End Notifcations */
+
+/* Start Media Quires */
+
+@media (min-width:1200px) {
+    .item-container .item-box {
+        width: calc((100% / 4) - 30px);
+    }
+}
+
+@media (min-width:1800px) {
+    .item-container .item-box {
+        width: calc((100% / 5) - 30px);
+    }
+}
+
+@media (min-width:2200px) {
+    .item-container .item-box {
+        width: calc((100% / 6) - 30px);
+    }
+}
+
+@media (max-width:800px) {
+    body {
+        padding-bottom: 70px;
+    }
+    .item-container .item-box {
+        width: calc((100% / 2) - 30px);
+    }
+    .filter div:first-of-type i {
+        width: 35px;
+    }
+    .filter div:first-of-type input {
+        width: 91%;
+    }
+    .filter div:last-of-type {
+        width: 38px;
+    }
+    .filter {
+        width: 90%;
+    }
+    .notifications .content {
+        width: 90%;
+        padding: 40px;
+    }
+    .notifications .noti {
+        padding: 13px;
+    }
+}
+
+@media (max-width:570px) {
+    .filter div:first-of-type {
+        width: 88%;
+    }
+    .filter div:first-of-type input {
+        width: 90%;
+    }
+    .categories ul li {
+        width: 46%;
+    }
+}
+
+@media (max-width:470px) {
+    .item-container .item-box {
+        width: 90%;
+    }
+    .filter div:first-of-type input {
+        width: 85%;
+    }
+}
+
+@media (max-width:420px) {
+    .filter div:first-of-type {
+        width: 85%;
+    }
+    .categories ul li {
+        width: 98%;
+    }
+    .top .box {
+        display: none;
+    }
+    .top .name {
+        text-align: left;
+    }
+    .top .name {
+        float: left;
+    }
+}
+
+@media (max-width:350px) {
+    .filter div:first-of-type {
+        width: 82%;
+    }
+    .filter div:first-of-type input {
+        width: 80%;
+    }
+}
+
+@media (max-width:280px) {
+    .filter div:first-of-type {
+        width: 100%;
+    }
+    .filter div:last-of-type {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .categories {
+        width: 93%;
+    }
+
+    .item-container .item-box {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width:700px) {
+    .notifications .noti textarea {
+        width: 88%;
+    }
+    .notifications .noti .action-btn {
+        width: 12%;
+    }
+}
+
+@media (max-width:600px) {
+    .notifications .noti textarea {
+        width: 82%;
+    }
+    .notifications .noti .action-btn {
+        width: 18%;
+    }
+}
+
+@media (max-width:450px) {
+    .notifications .noti {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .notifications .noti textarea {
+        width: 100%;
+    }
+    .notifications .noti .action-btn {
+        float: none;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+}
+/* End Media Quires */

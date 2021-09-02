@@ -12,9 +12,9 @@
 
 <body>
     <section>
-        <a class="abs-top0 abs-top" href="#">
+        <!-- <a class="abs-top0 abs-top" href="#">
             <i class="fa fa-bars"></i>
-        </a>
+        </a> -->
         <a class="abs-top1 abs-top" href="shop.php">
             <i class="fa fa-home"></i>
         </a>
@@ -25,34 +25,34 @@
             <table>
                 <tr>
                     <th>Item</th>
-                    <th>Item Image</th>
+                    <th class="sh">Item Image</th>
                     <th>Quantity</th>
-                    <th>Price / Unite</th>
+                    <th class="sh1">Price / Unite</th>
                     <th>Total Price</th>
                     <th>Remove</th>
                 </tr>
                 <tr>
                     <td>Tomato</td>
-                    <td><img src="imgs/items/tomato.png" alt=""></td>
-                    <td><span class="itqu">6.5</span> KG</td>
-                    <td><span class="itpr">10</span> EGP</td>
-                    <td><span class="ittopr"></span> EGP</td>
+                    <td class="sh"><img src="imgs/items/tomato.png" alt=""></td>
+                    <td><span class="itqu">6.5</span><br>KG</td>
+                    <td class="sh1"><span class="itpr">10</span><br>EGP</td>
+                    <td><span class="ittopr"></span><br>EGP</td>
                     <td><a href="#"><i class="fa fa-times"></i></a></td>
                 </tr>
                 <tr>
                     <td>Carrot</td>
-                    <td><img src="imgs/items/carrots.png" alt=""></td>
-                    <td><span class="itqu">2</span> KG</td>
-                    <td><span class="itpr">5</span> EGP</td>
-                    <td><span class="ittopr"></span> EGP</td>
+                    <td class="sh"><img src="imgs/items/carrots.png" alt=""></td>
+                    <td><span class="itqu">2</span><br>KG</td>
+                    <td class="sh1"><span class="itpr">5</span><br>EGP</td>
+                    <td><span class="ittopr"></span><br>EGP</td>
                     <td><a href="#"><i class="fa fa-times"></i></a></td>
                 </tr>
                 <tr>
                     <td>Chill</td>
-                    <td><img src="imgs/items/chili.png" alt=""></td>
-                    <td><span class="itqu">3.5</span> KG</td>
-                    <td><span class="itpr">20</span> EGP</td>
-                    <td><span class="ittopr"></span> EGP</td>
+                    <td class="sh"><img src="imgs/items/chili.png" alt=""></td>
+                    <td><span class="itqu">3.5</span><br>KG</td>
+                    <td class="sh1"><span class="itpr">20</span><br>EGP</td>
+                    <td><span class="ittopr"></span><br>EGP</td>
                     <td><a href="#"><i class="fa fa-times"></i></a></td>
                 </tr>
             </table>

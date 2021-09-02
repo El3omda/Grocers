@@ -1,0 +1,123 @@
+/* Strat Main */
+
+@font-face {
+    font-family: ubuntu;
+    src: url(../../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: ubuntu,arial;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+/* End Main */
+
+/* Start Add Item */
+
+.add-new-item {
+    width: 95%;
+    margin: 90px auto;
+}
+
+.add-new-item form {
+    padding: 30px;
+}
+
+.add-new-item form > div label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-new-item form .right {
+    width: 48%;
+    float: right;
+}
+
+.add-new-item form .left {
+    width: 48%;
+    float: left;
+}
+
+.add-new-item form .input-feild {
+    margin: 10px 0;
+}
+
+.add-new-item form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.add-new-item form input,.add-new-item form textarea,.add-new-item form select {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #5dc002;
+    text-align: center;
+    font-family: ubuntu,arial;
+}
+
+.add-new-item form textarea {
+    height: 99px;
+    resize: none;
+    padding: 5px 0;
+}
+
+.add-new-item form input[type="submit"] {
+    cursor: pointer;
+    color: #fff;
+    background-color: #5dc002;
+    border: 1px solid #5dc002;
+    font-weight: bold;
+    transition: all .3s;
+    font-size: 20px;
+    height: 40px;
+}
+.add-new-item form input[type="submit"]:hover {
+    color: #5dc002;
+    background-color: #fff;
+}
+
+.control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #5dc002;
+    border: 1px solid #5dc002;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 22px;
+    transition: all .3s;
+}
+
+.control:hover {
+    background-color: #fff;
+    color: #5dc002;
+}
+
+/* End Add Item */
+
+/* Start Media Queries */
+
+@media (max-width: 600px) {
+    .add-new-item form .left {
+        width: 100%;
+        float: none;
+    }
+    .add-new-item form .right {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* End Media Queries */

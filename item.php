@@ -37,6 +37,7 @@
             <p>Fresh Natural Tomato Come From Garden Directily 100% Pure And Organic</p>
             <ul>
                 <li><i class="fa fa-star"></i> 4.5</li>
+                <li><span>10</span> EGP \ KG</li>
                 <li><i class="fa fa-heartbeat"></i> 100 Kcal</li>
             </ul>
         </div>
@@ -51,7 +52,7 @@
         <div class="price-add">
             <ul>
                 <li>
-                    <p>TotalPrice <br> <span class="tprice">10</span> <span class="cur">EGP</span></p>
+                    <p>TotalPrice <br> <span class="tp">10</span> <span class="cur">EGP</span></p>
                 </li>
                 <li>
                     <a href="#">
@@ -62,6 +63,28 @@
             </ul>
         </div>
     </section>
+    <script>
+
+    var min = document.querySelector('.name-quantity .quantity ul li:first-of-type');
+    var quan = document.querySelector('.name-quantity .quantity ul li:nth-of-type(2) span');
+    var plus = document.querySelector('.name-quantity .quantity ul li:last-of-type');
+    var pr = document.querySelector('.item-info ul li:nth-of-type(2) span');
+    var tota = document.querySelector('.tp');
+
+    min.onclick = function () {
+        if (quan.innerHTML > 0) {
+            quan.innerHTML -= .5;
+        }
+        tota.innerHTML = parseFloat(quan.innerHTML) * parseFloat(pr.innerHTML);
+    }
+
+    plus.onclick = function () {
+        quan.innerHTML = parseFloat(quan.innerHTML) + .5;
+        tota.innerHTML = parseFloat(quan.innerHTML) * parseFloat(pr.innerHTML);
+    }
+
+    // console.log(tota.innerHTML)
+    </script>
 </body>
 
 </html>

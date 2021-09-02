@@ -26,7 +26,7 @@
         <div class="name">Sgin In</div>
         <div class="box"></div>
     </div>
-    <div class="take-action">
+    <div class="take-action sign-in">
         <p class="head">
             Sign In To Your Account
         </p>

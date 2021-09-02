@@ -160,7 +160,6 @@ p.head:after {
     font-size: 20px;
     font-weight: bold;
     background-color: #5dc002;
-    margin-left: 4%;
     border: 1px solid #5dc002;
     float: right;
     transition: all .3s;
@@ -195,3 +194,97 @@ p.head:after {
     color: #DF2E2E;
 }
 /* End Confirm Order */
+
+/* Start Media Queries */
+
+@media (max-width:950px) {
+    .confirm ul li {
+        width: 50%;
+    }
+    .confirm ul li:last-of-type i {
+        margin-right: 3px;
+    }
+}
+
+@media (max-width:670px) {
+    .confirm ul {
+        width: 75%;
+    }
+    .item-u-selected table th {
+        font-size: 14px;
+    }
+    .item-u-selected table td {
+        font-size: 13px;
+    }
+    .item-u-selected table td:last-of-type a {
+        font-size: 18px;
+        padding: 5px 6px;
+    }
+    p.head {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width:590px) {
+    .confirm ul {
+        width: 90%;
+    }
+    .item-u-selected table th {
+        font-size: 13px;
+    }
+    .item-u-selected table td {
+        font-size: 13px;
+    }
+    .item-u-selected table td:last-of-type a {
+        font-size: 16px;
+        padding: 5px 6px;
+    }
+}
+
+@media (max-width:510px) {
+    .confirm ul li:last-of-type i {
+        margin-right: 0px;
+        font-size: 19px;
+    }
+    .confirm ul li:last-of-type a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:435px) {
+    .confirm ul li:last-of-type i {
+        margin-right: 0px;
+        font-size: 17px;
+    }
+    .confirm ul li:last-of-type a {
+        font-size: 16px;
+    }
+    .sh {
+        display: none;
+    }
+    .item-u-selected table td {
+        padding: 20px 0;
+    }
+    .item-u-selected table td:first-of-type {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width:400px) {
+    .confirm ul li {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .item-u-selected table th {
+        padding: 5px;
+    }
+    .sh1 {
+        display: none;
+    }
+    .item-u-selected table td:last-of-type a {
+        font-size: 12px;
+    }
+}
+
+/* End Media Queries */

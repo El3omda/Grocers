@@ -1,0 +1,122 @@
+/* Start Main */
+@font-face {
+    font-family: ubuntu;
+    src: url(../../../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: ubuntu, arial;
+    background-color: #f6f6f6;
+}
+
+/* End Main */
+
+/* Start Filter */
+
+.filter {
+    width: 80%;
+    margin: 65px auto;
+    padding: 30px 0;
+}
+
+.filter form input:not(input[type="submit"]) {
+    width: 75%;
+    float: left;
+    margin-right: 5%;
+    height: 35px;
+    border: 1px solid #5dc002;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 20%;
+    float: right;
+    border: 1px solid #5dc002;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5dc002;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    transition: all .3s;
+}
+
+input[type="submit"]:hover {
+    color: #5dc002;
+    background-color: #fff;
+}
+
+/* End Filter */
+
+/* Start Items Container */
+
+.items-container {
+    width: 80%;
+    margin: auto;
+}
+
+.items-container table {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.items-container table th {
+    border: 1px solid #5dc002;
+    color: #fff;
+    font-weight: bold;
+    background-color: #5dc002;
+    padding: 10px 0;
+}
+
+.items-container table td {
+    padding: 10px 0;
+    border: 1px solid #5dc002;
+    font-weight: bold;
+}
+
+.items-container table td a {
+    text-decoration: none;
+}
+
+.items-container table th:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+.items-container table th:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+/* End Items Container */
+
+.control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #5dc002;
+    border: 1px solid #5dc002;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 22px;
+    transition: all .3s;
+}
+
+.control:hover {
+    background-color: #fff;
+    color: #5dc002;
+}

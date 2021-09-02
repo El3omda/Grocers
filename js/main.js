@@ -36,4 +36,3 @@ for (let i = 0; i < itemTotalPrice.length; i++) {
 
 itemsTotalPrice.innerHTML = calculatedPrice;
 // End User Cart Functions
-

@@ -161,3 +161,60 @@ form .input-field input[type="submit"]:hover {
 }
 
 /* End Form */
+
+/* Start Media Queries */
+
+@media(max-width: 490px) {
+    .take-action {
+        width: 70%;
+    }
+    .signup {
+        width: 80%;
+    }
+    .signup .head {
+        font-size: 25px;
+    }
+    .sign-in {
+        top: 24%;
+    }
+}
+
+@media(max-width: 350px) {
+    .signup .head {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 350px) {
+    .take-action {
+        width: 85%;
+    }
+}
+@media(max-width: 290px) {
+    .take-action .head {
+        font-size: 25px;
+    }
+    .take-action .box .green-btn {
+        padding: 12px 0;
+    }
+    .top > div {
+        width: calc(100% / 2);
+    }
+    .top .box {
+        display: none;
+    }
+    .top .name {
+        text-align: left;
+        float: left;
+    }
+    .signup {
+        top: 20%;
+    }
+}
+
+@media(max-width: 240px) {
+    .take-action {
+        width: 95%;
+    }
+}
+/* End Media Queries */

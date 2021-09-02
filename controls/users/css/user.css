@@ -1,0 +1,120 @@
+/* Start Main */
+@font-face {
+    font-family: cario;
+    src: url(../fonts/Cairo.ttf);
+}
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/Ubuntu.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    font-family: ubuntu, arial;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* End Main */
+
+/* Start Floating Top Icon */
+
+.abs-top {
+    position: absolute;
+    line-height: 35px;
+    background-color: #fff;
+    color: #5dc002;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.abs-top:hover {
+    color: #fff;
+    background-color: #5dc002;
+}
+.abs-top0 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+}
+.abs-top0 i {
+    margin-left: -2px;
+}
+.abs-top1 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+}
+
+/* End Floating Top Icon */
+
+/* Start Form */
+
+.edit-user-info {
+    width: 80%;
+    margin: 170px auto;
+}
+
+form {
+    margin-top: -20px;
+}
+
+form .input-field label {
+    display: block;
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #5dc002;
+}
+
+form .input-field input {
+    height: 40px;
+    width: 95%;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form .input-field input::placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+form .input-field input:focus::placeholder {
+    opacity: 0;
+}
+
+
+form .input-field input[type="submit"] {
+    display: block;
+    width: 97%;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: ubuntu;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #5dc002;
+    border: 1px solid #5dc002;
+    cursor: pointer;
+    transition: all .3s;
+    height: 40px;
+}
+
+form .input-field input[type="submit"]:hover {
+    background-color: transparent;
+    color: #5dc002;
+}
+
+/* End Form */
