@@ -1,3 +1,30 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['UserEmail'])) {
+    header('Location:index.php');
+}
+
+require_once 'config.php';
+
+$UserEmail = $_SESSION['UserEmail'];
+
+$sqlGUFI = "SELECT ItemID FROM favorites WHERE UserEmail = '$UserEmail'";
+
+$resultGUFI = mysqli_query($conn,$sqlGUFI);
+
+if (isset($_POST['ItemID'])) {
+    foreach ($_POST as $name => $value) {
+    $sqlDFF = "DELETE FROM favorites WHERE UserEmail = '$UserEmail' AND ItemID = '$value'";
+    mysqli_query($conn,$sqlDFF);
+    header("Location:favorites.php");
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,20 +50,51 @@
         </p>
         <div class="item-u-selected">
             <table>
-                <tr>
+                
+
+                <?php
+                
+                    if ($resultGUFI->num_rows > 0) {
+                        echo '
+                        <tr>
                     <th>Item</th>
                     <th>Item Image</th>
                     <th>Item Info</th>
                     <th>Price / Unite</th>
                     <th>Remove</th>
                 </tr>
-                <tr>
-                    <td>Tomato</td>
-                    <td><img src="imgs/items/tomato.png" alt=""></td>
-                    <td><pre>Fresh And Pure From Our Secret Supplier Organic 100%</pre></td>
-                    <td>10 EGP</td>
-                    <td><a href="#"><i class="fa fa-times"></i></a></td>
-                </tr>
+                        ';
+                        while ($rowGUFI = $resultGUFI->fetch_assoc()) {
+                            $ItemID = $rowGUFI['ItemID'];
+                            $sqlFI = "SELECT * FROM items WHERE ID = '$ItemID'";
+                            $resultFI = mysqli_query($conn,$sqlFI);
+                            while ($rowFI = $resultFI->fetch_assoc()) {
+                                echo '
+                                <tr>
+                                    <td>' . $rowFI['Item'] . '</td>
+                                    <td><img src="' . $rowFI['ItemImage'] . '" alt="' . $rowFI['Item'] . '"></td>
+                                    <td><p>' . $rowFI['ItemInfo'] . '</p></td>
+                                    <td>' . $rowFI['SellPrice'] . ' EGP</td>
+                                    <td>
+                                    <form action="' . $_SERVER['PHP_SELF'] . '" method="POST">
+
+                                        <button type="submit" name="ItemID" value="' . $rowFI['ID'] . '">
+                                            <i class="fa fa-times"></i></form>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                ';
+                            }
+                        }
+                    } else {
+                        echo '
+                            <p style="font-weight:bold;font-size:17px;text-align: center;margin-top: 100px;">There Is No Favorite Items Yet</p>
+                        ';
+                    }
+                
+                ?>
+
             </table>
         </div>
     </section>

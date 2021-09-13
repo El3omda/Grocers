@@ -1,3 +1,42 @@
+<?php
+
+require_once 'config.php';
+
+session_start();
+
+if (!isset($_SESSION['UserEmail'])) {
+    header('Location:index.php');
+}
+
+// Get User Informations
+
+$UserEmail = $_SESSION['UserEmail'];
+
+$sqlGUI = "SELECT * FROM users WHERE Email = '$UserEmail'";
+
+$result = mysqli_query($conn,$sqlGUI);
+
+$rowGUI = $result->fetch_assoc();
+
+// Update User DAta 
+
+if (isset($_POST['submit'])) {
+    @$UserName = $_POST['UserName'];
+    @$UserEmail = $_POST['UserEmail'];
+    @$UserPass = $_POST['UserPass'];
+    @$UserPhone = $_POST['UserPhone'];
+
+    $sqlUUI = "UPDATE users SET Name = '$UserName', Email = '$UserEmail', Password = '$UserPass', Phone = '$UserPhone' WHERE Email = '$UserEmail'";
+    if (mysqli_query($conn,$sqlUUI)) {
+        $msg = 'Updated Successfully';
+    } else {
+        $msg = mysqli_error($conn);
+    }
+}
+echo @$msg;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,19 +59,19 @@
         <form action="" method="POST">
             <div class="input-field">
                 <label for="">Name</label>
-                <input type="text" value="" name="UserName" placeholder="Enter Your Name . . ." >
+                <input type="text" value="<?php echo $rowGUI['Name'];?>" name="UserName" placeholder="Enter Your Name . . ." >
             </div>
             <div class="input-field">
                 <label for="">Email</label>
-                <input type="email" value="" name="UserEmail" placeholder="Enter Your Email . . ." >
+                <input type="email" value="<?php echo $rowGUI['Email'];?>" name="UserEmail" placeholder="Enter Your Email . . ." >
             </div>
             <div class="input-field">
                 <label for="">Password</label>
-                <input type="text" value="" name="UserPass" placeholder="Enter Your Password . . ." >
+                <input type="text" value="<?php echo $rowGUI['Password'];?>" name="UserPass" placeholder="Enter Your Password . . ." >
             </div>
             <div class="input-field">
                 <label for="">Phone</label>
-                <input type="text" value="" name="UserPhone" placeholder="Enter Your Phone . . ." >
+                <input type="text" value="<?php echo $rowGUI['Phone'];?>" name="UserPhone" placeholder="Enter Your Phone . . ." >
             </div>
             <div class="input-field">
                 <input type="submit" name="submit" value="Login">

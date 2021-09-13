@@ -1,3 +1,42 @@
+<?php
+
+session_start();
+
+if ($_SESSION['UserEmail'] != 'admin@admin.com') {
+    header('Location:../../index.php');
+}
+
+require_once '../../config.php';
+
+
+if (isset($_POST['AddItem'])) {
+    @$ItemName = $_POST['ItemName'];
+    @$ItemNameAR = $_POST['ItemNameAR'];
+    @$ItemImage = $_POST['ItemImage'];
+    @$InStock = $_POST['InStock'];
+    @$BuyPrice = $_POST['BuyPrice'];
+    @$SellPrice = $_POST['SellPrice'];
+    @$ItemUnit = $_POST['ItemUnit'];
+    @$ItemUnitAR = $_POST['ItemUnitAR'];
+    @$ItemInfo = $_POST['ItemInfo'];
+    @$ItemInfoAR = $_POST['ItemInfo'];
+    @$ItemCal = $_POST['ItemCal'];
+    @$ItemType = $_POST['ItemType'];
+    @$ItemTypeAR = $_POST['ItemTypeAR'];
+
+    // Sql Insert Items
+    $sqlII = "INSERT INTO items (Item,ItemAr,ItemImage,InStock,BuyPrice,SellPrice,Unit,UnitAr,ItemInfo,ItemInfoAr,ItemCal,ItemType,ItemTypeAr)
+    VALUES ('$ItemName','$ItemNameAR','$ItemImage','$InStock','$BuyPrice','$SellPrice','$ItemUnit','$ItemUnitAR','$ItemInfo','$ItemInfoAR','$ItemCal','$ItemType','$ItemTypeAR')";
+    if (mysqli_query($conn,$sqlII)) {
+        echo 'Inserted Successfully';
+    } else {
+        echo 'Something Wrong !! => ' . mysqli_error($conn);
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +60,10 @@
                         <input type="text" name="ItemName" id="ItemName" required>
                     </div>
                     <div class="input-feild">
+                        <label for="ItemNameAR">Arabic Item Name</label>
+                        <input type="text" name="ItemNameAR" id="ItemNameAR" required>
+                    </div>
+                    <div class="input-feild">
                         <label for="ItemImage">Item Image</label>
                         <input type="text" name="ItemImage" id="ItemImage" required>
                     </div>
@@ -36,22 +79,46 @@
                         <label for="SellPrice">Sell Price</label>
                         <input type="text" name="SellPrice" id="SellPrice" required>
                     </div>
+                    <div class="input-feild">
+                        <label for="ItemTypeAR">Arabic Item Type</label>
+                        <select name="ItemTypeAR" id="ItemTypeAR">
+                            <option value="شيبسي">شيبسي</option>
+                            <option value="مشروبات">مشروبات</option>
+                            <option value="خضراوات">خضراوات</option>
+                            <option value="فواكهة">فواكهة</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="right">
                     <div class="input-feild">
                         <label for="Unit">Unit</label>
                         <select name="ItemUnit" id="Unit">
-                            <option value="Kilograme">KG</option>
-                            <option value="Grame">G</option>
-                            <option value="Liter">L</option>
-                            <option value="MileLiter">ML</option>
-                            <option value="Package">Pk</option>
+                            <option value="KG">KG</option>
+                            <option value="G">G</option>
+                            <option value="L">L</option>
+                            <option value="ML">ML</option>
+                            <option value="Pk">Pk</option>
                             <option value="Pice">Pice</option>
+                        </select>
+                    </div>
+                    <div class="input-feild">
+                        <label for="UnitAR">Unit</label>
+                        <select name="ItemUnitAR" id="UnitAR">
+                            <option value="كيلو">كيلو</option>
+                            <option value="جرام">جرام</option>
+                            <option value="لتر">لتر</option>
+                            <option value="مليلتر">مليلتر</option>
+                            <option value="صندوق">صندوق</option>
+                            <option value="قطعة">قطعة</option>
                         </select>
                     </div>
                     <div class="input-feild">
                         <label for="ItemInfo">Item Info</label>
                         <textarea name="ItemInfo" id="ItemInfo" required></textarea>
+                    </div>
+                    <div class="input-feild">
+                        <label for="ItemInfoAR">Arabic Item Info</label>
+                        <textarea name="ItemInfoAR" id="ItemInfoAR" required></textarea>
                     </div>
                     <div class="input-feild">
                         <label for="ItemCal">Item Calories</label>

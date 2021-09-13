@@ -2,7 +2,18 @@
 <nav>
     <ul>
         <li><a href="shop.php"><i class="fa fa-home"></i></a></li>
-        <li><a href="#"><i class="fa fa-bell-o"></i><span>1</span></a></li>
+        <li><a href="#"><i class="fa fa-bell-o"></i>
+            <?php
+            
+                if (@$NotifiNo != 0) {
+                    echo '
+                        <span>' . @$NotifiNo . '</span>
+                    ';
+                }
+
+            ?>
+            
+            </a></li>
         <li>
             <a href="cart.php"><i class="fa fa-shopping-basket"></i></a>
         </li>

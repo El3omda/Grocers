@@ -4,11 +4,21 @@
     font-family: ubuntu;
     src: url(../fonts/Ubuntu.ttf);
 }
-
+@font-face {
+    font-family: cairo;
+    src: url(../fonts/Cairo.ttf);
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+.ar {
+    font-family: cairo,arial !important;
+    direction: rtl;
+    text-align: center;
 }
 
 body {
@@ -146,8 +156,17 @@ section {
     color: #DF2E2E;
 }
 
-.name-quantity .quantity ul li:nth-of-type(2) span {
+.name-quantity .quantity ul li:nth-of-type(2) form {
+    display: inline;
+}
+
+.name-quantity .quantity ul li:nth-of-type(2) input {
     color: #5dc002;
+    width: 35px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    font-size: 17px;
 }
 
 .name-quantity .quantity ul li:last-of-type {
@@ -441,6 +460,13 @@ section {
     }
     .price-add ul li:last-of-type {
         font-size: 22px;
+    }
+    .name-quantity .quantity ul li:nth-of-type(2) input {
+        width: 24px;
+    }
+    .name-quantity .quantity ul li {
+        margin-left: 3px;
+        padding: 15px 7px;
     }
 }
 

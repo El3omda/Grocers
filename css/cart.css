@@ -109,7 +109,7 @@ p.head:after {
     font-weight: bold;
     font-size: 18px;
 }
-.item-u-selected table td:last-of-type a {
+.item-u-selected table td:last-of-type form button {
     font-size: 25px;
     background-color: #DF2E2E;
     padding: 5px 8px;
@@ -117,8 +117,9 @@ p.head:after {
     color: #fff;
     border-radius: 5px;
     transition: all .3s;
+    cursor: pointer;
 }
-.item-u-selected table td:last-of-type a:hover {
+.item-u-selected table td:last-of-type form button:hover {
     color: #DF2E2E;
     background-color: #fff;
 }

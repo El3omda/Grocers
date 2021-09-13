@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+require_once '../../config.php';
+
+if ($_SESSION['UserEmail'] != 'admin@admin.com') {
+    header("Location:../../index.php");
+}
+
+$sqlGI = "SELECT * FROM items";
+$result = mysqli_query($conn,$sqlGI);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,20 +35,39 @@
     </div>
     <div class="items-container">
         <table>
+            <?php
+            
+            
+            if ($result->num_rows > 0) {
+                echo '
             <tr>
                 <th>Item</th>
                 <th>In Stock</th>
                 <th>Sell Price</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td>Tomato</td>
-                <td>20 KG</td>
-                <td>10 EGP</td>
-                <td>
-                    <a href="item.php">All Data</a>
-                </td>
-            </tr>
+            ';
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                <tr>
+                    <td>' . $row['Item'] . '</td>
+                    <td>' . $row['InStock'] . ' KG</td>
+                    <td>' . $row['SellPrice'] . ' EGP</td>
+                    <td>
+                        <a href="item.php?id=' . $row['ID'] . '">All Data</a>
+                    </td>
+                </tr>
+                ';
+            }
+            } else {
+                echo '
+                    <p style="font-weight:bold;font-size:18px;margin-top: 100px;text-align: center;></p>
+                ';
+            }
+            
+            
+            ?>
+            
         </table>
     </div>
 </body>

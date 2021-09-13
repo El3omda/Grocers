@@ -4,17 +4,126 @@
     font-family: ubuntu;
     src: url(../fonts/Ubuntu.ttf);
 }
-
+@font-face {
+    font-family: cairo;
+    src: url(../fonts/Cairo.ttf);
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+.ar {
+    font-family: cairo,arial !important;
+    direction: rtl;
+    text-align: center;
+}
+
 body {
     font-family: ubuntu, arial;
     background-color: #f9f9f9;
     color: #333;
+    padding-bottom: 50px;
+}
+
+.left-nav {
+    position: fixed;
+    top: 45%;
+    left: 0;
+    width: 35px;
+    line-height: 32px;
+    height: 35px;
+    transform: translateY(-50%);
+    border: 1px solid #5dc002;
+    background-color: #fff;
+    color: #5dc002;
+    font-size: 20px;
+    text-align: center;
+    transition: all .3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.left-nav:hover {
+    background-color: #5dc002;
+    color: #fff;
+}
+
+.over-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    display: none;
+}
+.over-nav i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+    color: #fff;
+    background-color: #5dc002;
+    border-radius: 5px;
+    border: 1px solid #5dc002;
+    cursor: pointer;
+    transition: all .3s;
+}
+.over-nav i:hover {
+    background-color: #fff;
+    color: #5dc002;
+}
+
+.over-nav img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #5dc002;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.over-nav ul:first-of-type {
+    padding: 10px 0;
+}
+.over-nav ul:first-of-type li {
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.over-nav ul:first-of-type li:first-of-type {
+    text-transform: capitalize;
+}
+
+.over-nav ul:last-of-type {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
+} 
+.over-nav ul:last-of-type li {
+    width: 30%;
+    margin: 10px auto;
+}
+.over-nav ul:last-of-type li a {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    background-color: #5dc002;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #5dc002;
+    transition: all .3s;
+}
+.over-nav ul:last-of-type li a:hover {
+    color: #5dc002;
+    background-color: #fff;
 }
 
 /* End Main Options */
@@ -211,6 +320,10 @@ section .top {
     margin-left: 20px;
     margin-bottom: 20px;
 }
+.item-container .item-box > a {
+    text-decoration: none;
+    color: #333;
+}
 .item-container .item-box img {
     width: 80%;
     height: 210px;
@@ -240,24 +353,38 @@ section .top {
     line-height: 1.4;
     width: calc(100% - 80px);
 }
-.item-container .item-box .item-action p.love {
-    text-align: left;
+.formlove {
+    float: left;
     width: 40px;
     height: 40px;
 }
-.item-container .item-box .item-action p.love i {
+.formCart {
+    float: right;
+    width: 40px;
+    height: 40px;
+}
+.formlove button,.formCart button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+    .item-container .item-box .item-action button i {
+    color: #666;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s;
+}
+.item-container .item-box .item-action .formlove button i:hover,.item-container .item-box .item-action  .formlove button i.active {
     color: #f00;
-    cursor: pointer;
-    font-size: 20px;
 }
-.item-container .item-box .item-action p.addToCart {
-    text-align: right;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-}
-.item-container .item-box .item-action p.addToCart i {
+.item-container .item-box .item-action .addToCart button i {
     cursor: pointer;
+    transition: all .3s;
+}
+.item-container .item-box .item-action .formCart button i:hover,
+.item-container .item-box .item-action .formCart button i.active {
+    color: #5dc002;
 }
 /* End Items Container */
 
